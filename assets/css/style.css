@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #d3d3d3;
+  }
+
+  section {
+    scroll-margin-top: 60px; /* O l'altezza del tuo menu */
+  }
+
+  
+  
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+    border-radius: .25rem
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: .25rem
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
