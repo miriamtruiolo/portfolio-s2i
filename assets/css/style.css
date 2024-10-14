@@ -15,6 +15,11 @@
     scroll-margin-top: 60px; /* O l'altezza del tuo menu */
   }
 
+  button:disabled {
+    background-color: #d3d3d3; /* Colore di sfondo per il pulsante disabilitato */
+    cursor: not-allowed; /* Cambia il cursore quando è disabilitato */
+  }
+
   
   
   /* width */
