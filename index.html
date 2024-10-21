@@ -47,29 +47,17 @@
                     <a href="#" class="hover:cursor-pointer"><img src="./assets/images/logo.png"
                             alt="logo personale di Miriam Truiolo" class="w-10 fixed top-3 left-3"></a>
                 </div>
-
+                
                 <!-- Menù desktop -->
                 <ul class="hidden md:flex space-x-8 text-gray-700">
-                    <li><a href="#"
-                            class="block bg-gradient-to-tr from-[#2A446B] to-[#38B6FF] md:bg-transparent text-white block pl-3 pr-4 py-2 md:text-white md:p-1 md:-mt-1 rounded">Home</a>
-                    </li>
-                    <li><a href="#about-me"
-                            class="block text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">About
-                            me</a></li>
-                    <li><a href="#projects"
-                            class="block text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Projects</a>
-                    </li>
-                    <li><a href="#skills"
-                            class="block text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Skills</a>
-                    </li>
-                    <li><a href="/contact.html"
-                            class="block text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Contact</a>
-                    </li>
-                    <li><a href="/curriculum.html"
-                            class="block text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Curriculum</a>
-                    </li>
+                    <li><a href="#" class="block bg-gradient-to-tr from-[#2A446B] to-[#38B6FF] md:bg-transparent text-white block pl-3 pr-4 py-2 md:text-white md:p-1 md:-mt-1 rounded">Home</a></li>
+                    <li><a href="#about-me" class="block text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">About me</a></li>
+                    <li><a href="#projects" class="block text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Projects</a></li>
+                    <li><a href="#skills" class="block text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Skills</a></li>
+                    <li><a href="/contact.html" class="block text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Contact</a></li>
+                    <li><a href="/curriculum.html" class="block text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Curriculum</a></li>
                 </ul>
-
+        
                 <!-- Bottone del menù mobile -->
                 <button id="menu-btn" type="button"
                     class="md:hidden text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center fixed top-3 right-3 z-20"
@@ -80,7 +68,7 @@
                             stroke-linecap="round"></path>
                     </svg>
                 </button>
-
+        
                 <!-- Mobile Menu -->
                 <div id="mobile-menu-3"
                     class="hidden fixed inset-0 bg-gradient-to-tr from-[#2A446B] to-[#38B6FF] text-white flex flex-col justify-center items-center space-y-8 z-10 md:hidden">
@@ -96,13 +84,13 @@
             </div>
         </nav>
 
-        <!-- Script per l'animazione del menù -->
+        <!-- Mobile menù js-->
         <script>
             const menuBtn = document.getElementById('menu-btn');
             const mobileMenu = document.getElementById('mobile-menu-3');
             let menuOpen = false;
 
-            // Funzione per aggiornare l'icona dell'hamburger
+            // Icona menù mobile
             const toggleMenuIcon = (isOpen) => {
                 if (isOpen) {
                     menuBtn.innerHTML = `<span class="sr-only">Close main menu</span>
@@ -117,19 +105,19 @@
                 }
             };
 
-            // Gestione apertura/chiusura del menu
+            // Apertura/chiusura del menu
             menuBtn.addEventListener('click', () => {
                 menuOpen = !menuOpen;
                 mobileMenu.classList.toggle('hidden');
                 toggleMenuIcon(menuOpen);
             });
 
-            // Chiudi il menu quando un link viene cliccato
+            // Chiudere il menu quando un link viene cliccato
             document.querySelectorAll('#mobile-menu-3 a').forEach(link => {
                 link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden'); // Nascondi il menu
-                    menuOpen = false; // Aggiorna lo stato del menu
-                    toggleMenuIcon(menuOpen); // Aggiorna l'icona dell'hamburger
+                    mobileMenu.classList.add('hidden'); 
+                    menuOpen = false; 
+                    toggleMenuIcon(menuOpen); 
                 });
             });
 

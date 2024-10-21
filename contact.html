@@ -86,13 +86,13 @@
                 </div>
             </div>
         </nav>
-        <!-- Script per l'animazione del menù -->
+        <!-- Mobile menù js-->
         <script>
             const menuBtn = document.getElementById('menu-btn');
             const mobileMenu = document.getElementById('mobile-menu-3');
             let menuOpen = false;
 
-            // Funzione per aggiornare l'icona dell'hamburger
+            // Icona menù mobile
             const toggleMenuIcon = (isOpen) => {
                 if (isOpen) {
                     menuBtn.innerHTML = `<span class="sr-only">Close main menu</span>
@@ -107,19 +107,19 @@
                 }
             };
 
-            // Gestione apertura/chiusura del menu
+            // Apertura/chiusura del menu
             menuBtn.addEventListener('click', () => {
                 menuOpen = !menuOpen;
                 mobileMenu.classList.toggle('hidden');
                 toggleMenuIcon(menuOpen);
             });
 
-            // Chiudi il menu quando un link viene cliccato
+            // Chiusura menu quando un link viene cliccato
             document.querySelectorAll('#mobile-menu-3 a').forEach(link => {
                 link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden'); // Nascondi il menu
-                    menuOpen = false; // Aggiorna lo stato del menu
-                    toggleMenuIcon(menuOpen); // Aggiorna l'icona dell'hamburger
+                    mobileMenu.classList.add('hidden'); 
+                    menuOpen = false; 
+                    toggleMenuIcon(menuOpen); 
                 });
             });
 
